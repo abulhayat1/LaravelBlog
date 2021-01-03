@@ -18,8 +18,8 @@
 			    </div>
 				    
 			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="{{ $article->id > 1 ? $article->id -1 :  $article->id  }}">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="{{ $article->id+1 }}">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="{{ URL::to( 'articles/' . $previous ) }}">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="{{ URL::to( 'articles/' . $next ) }}">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
 				</nav>
 				
 				<div class="blog-comments-section">
@@ -62,5 +62,4 @@
 				
 		    </div><!--//container-->
 	    </article>
-	    lara_apps\blog\resources\views\articles\show.blade.php
 @endsection

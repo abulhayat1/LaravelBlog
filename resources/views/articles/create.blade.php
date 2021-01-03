@@ -1,5 +1,18 @@
 @extends('layout')
 
+        
+@section('head')
+<script src="/plugins/tinymce/tinymce.min.js"></script>
+        <script>
+            tinymce.init({
+                selector:'textarea#body',
+                width: 900,
+                height: 300
+            });
+        </script>
+@endsection
+
+
 @section('content')
     <div id="wrapper ">
         <div id="page" class="container">
@@ -10,11 +23,11 @@
                 @csrf
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input id="title" class="form-control" type="title" name="title">
+                    <input id="title" class="form-control" type="title" name="title" required>
                 </div>
             <div class="form-group">
                 <label for="excerpt">Excerpt</label>
-                <textarea id="excerpt" class="form-control" name="excerpt" rows="3"></textarea>
+                <textarea id="excerpt" class="form-control" name="excerpt" rows="3" required></textarea>
             </div>
             <div class="form-group">
                 <label for="body">Body</label>
